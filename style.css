@@ -1,0 +1,69 @@
+:root {
+    --fundo-principal: #e0e0e0;
+    --cor-texto: #000;
+    --cor-destaque: #001935;
+}
+body{
+    background: rgb(100, 100, 100); 
+    background-color: var(--fundo-principal);
+    color: var(--cor-texto);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+.informacoes{
+    border: 2px solid black;
+    border-radius: 1vh;
+    background: whitesmoke;
+    margin: 30vh;
+    margin-left: 70vh;
+    margin-right: 70vh;
+}
+.img{
+    width: 15vh;
+}
+#mode-toggle {
+    padding: 10px 15px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  #mode-toggle:hover {
+    background-color: var(--cor-destaque);
+    color: var(--fundo-principal);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  body.dark-mode {
+    --fundo-principal: #121212;
+    --cor-texto: #ffffff;
+    --cor-destaque: #00aaff;
+    background-color: var(--fundo-principal);
+    color: var(--cor-texto);
+  }
+  
+  body.dark-mode .card {
+    background: #1e1e1e;
+    color: var(--cor-texto);
+    box-shadow: 20px 20px 60px #0e0e0e, -20px -20px 60px #2a2a2a;
+  }
+  
+  body.dark-mode #mode-toggle {
+    border-color: var(--cor-texto);
+    color: var(--cor-texto);
+  }
+  
+  body.dark-mode #mode-toggle:hover {
+    background-color: var(--cor-destaque);
+    color: #000;
+  }
